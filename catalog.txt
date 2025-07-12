@@ -1,0 +1,21 @@
+*gimp*|config|~/.config/GIMP/*
+*gimp*|data|~/.local/share/GIMP/*
+*nvim*|cache|~/.local/state/nvim/shada/*
+*nvim*|config|~/.config/nvim/init.vim
+bash|config|~/.bash_profile
+bash|config|~/.bashrc
+chromium|cache|~/.cache/chromium/
+chromium|config|~/.config/chromium/*
+code*|config|~/.config/Code/User/*
+code*|data|~/.vscode/extensions/
+firefox|cache|~/.cache/mozilla/firefox/
+firefox|config|~/.mozilla/firefox/*/prefs.js
+git|config|~/.gitconfig
+google-chrome|cache|~/.cache/google-chrome/
+google-chrome|config|~/.config/google-chrome/*
+ssh|config secret|~/.ssh/config
+thunderbird|cache|~/.cache/thunderbird/
+thunderbird|config|~/.thunderbird/*
+vlc|config|~/.config/vlc/*
+vlc|data|~/.local/share/vlc/*
+zsh|config|~/.zshrc
