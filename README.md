@@ -13,7 +13,7 @@ Entries are stored in a simple, low-level, shell-friendly text file format:
 `<binary-glob>|<tags>|<path-glob>`
 
 Where:
-- `binary-glob` — glob pattern matching the responsible binary or application (`firefox`, `code*`, `*vim`, etc.)
+- `binary-glob` — glob pattern matching the responsible binary or application (`firefox`, `code*`, etc.)
 - `tags` — space-separated list of tags where ALL must apply:
   - `config` — user settings and preferences
   - `data` — application data or state
@@ -27,14 +27,12 @@ Where:
 ## Example Entries
 
 ```text
-firefox|config|~/.mozilla/firefox/*/prefs.js
-firefox|cache log|~/.cache/mozilla/firefox/
-code*|config|~/.config/Code/User/settings.json
-code*|data secret|~/.vscode/extensions/
-*gimp*|config|~/.config/GIMP/*
-nvim|config|~/.config/nvim/init.vim
-*nvim*|cache log|~/.local/state/nvim/shada/
-ssh|config secret|~/.ssh/*
+bash|config|~/.bashrc
+code*|config|~/.config/Code/User/*
+idea*|cache|~/.cache/JetBrains/IdeaIC*
+idea*|config|~/.config/JetBrains/IdeaIC*
+idea*|data|~/.local/share/JetBrains/IdeaIC*
+ssh|config secret|~/.ssh/
 ```
 
 ## Goals
@@ -50,3 +48,18 @@ ssh|config secret|~/.ssh/*
 ## Contributing
 
 Open a pull request to add new entries or improve existing ones.
+
+## Example scripts
+
+### lstag.sh
+
+Lists home files matching specified tags:
+
+Usage examples:
+```bash
+# List all config files
+./lstag.sh config
+
+# List all cache files
+./lstag.sh cache
+```
